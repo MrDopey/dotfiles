@@ -6,7 +6,16 @@ sudo apt update && sudo apt install -y build-essential
 # Node
 curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
+
+# Telescope dependency
+ver=14.1.0
+curl -LO "https://github.com/BurntSushi/ripgrep/releases/download/${ver}/ripgrep_${ver}-1_amd64.deb"
+sudo dpkg -i "ripgrep_${ver}-1_amd64.deb"
 ```
+
+Disable ctrl+c/v bindings in windows terminal
+- https://github.com/microsoft/terminal/issues/5641#issuecomment-621186852 and then https://learn.microsoft.com/en-us/windows/terminal/install#settings-json-filf
+- then sync system clipboard with windows https://superuser.com/questions/1291425/windows-subsystem-linux-make-vim-use-the-clipboard
 
 ---
 
