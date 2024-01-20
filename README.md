@@ -1,3 +1,17 @@
+Need to install for treesitter https://stackoverflow.com/questions/75587679/neovim-treesitter-returning-no-c-complier-error?noredirect=1
+
+```shell
+sudo apt update && sudo apt install -y build-essential
+
+# Node
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+
+---
+
+Cloned from https://github.com/dam9000/kickstart-modular.nvim
+
 # kickstart-modular.nvim
 
 https://github.com/kdheepak/kickstart.nvim/assets/1813121/f3ff9a2b-c31f-44df-a4fa-8a0d7b17cf7b
