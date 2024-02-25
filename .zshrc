@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Your token will be expired at 11:00 12/31/2023
 
 # Source any secrets/tokens to be injected into the session
-source ./secrets.sh
+source "$HOME/secrets.sh"
 
 export PATH="$PATH:$HOME/download/nvim-linux64/bin/"
 # alias git='sudo git'
