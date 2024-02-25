@@ -11,6 +11,11 @@ chmod +x secrets.sh
 stow .
 ```
 
+Once inside a tmux shell, install the packages
+```
+<c-b>I
+```
+
 
 # Helpful
 
