@@ -104,5 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # Source any secrets/tokens to be injected into the session
 source "$HOME/secrets.sh"
 
+function save_logseq ()
+{
+  local date=$(date '+%Y-%m-%d')
+  local commit_message=${1:-"$date dump"}
+
+  pushd /mnt/c/Sandbox/logsec-dev-notes/ 1>/dev/null
+    git add -A
+    git commit -m "$commit_message"
+    git push origin master
+
+  popd 1>/dev/null
+}
+
 export PATH="$PATH:$HOME/download/nvim-linux64/bin/"
 # alias git='sudo git'
