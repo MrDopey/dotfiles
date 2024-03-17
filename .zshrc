@@ -107,7 +107,8 @@ source "$HOME/secrets.sh"
 function save_logseq ()
 {
   local date=$(date '+%Y-%m-%d')
-  local commit_message=${1:-"$date dump"}
+  local local_message=${1:-"dump"}
+  local commit_message=$(echo "$date $local_message")
 
   pushd /mnt/c/Sandbox/logsec-dev-notes/ 1>/dev/null
     git add -A
