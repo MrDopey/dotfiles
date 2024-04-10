@@ -16,6 +16,10 @@ Once inside a tmux shell, install the packages
 <c-b>I
 ```
 
+Download zsh theme
+```shell
+curl -o ~/.oh-my-zsh/themes/nuts.zsh-theme https://raw.githubusercontent.com/rafaelsq/nuts.zsh-theme/master/nuts.zsh-theme
+```
 
 # Helpful
 
