@@ -79,8 +79,11 @@ local servers = {
   -- gopls = {},
   pyright = {},
   rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {
+
+  },
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
+  volar = {},
 
   lua_ls = {
     Lua = {
@@ -115,6 +118,29 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
+}
+
+-- Vue
+-- https://github.com/vuejs/language-tools
+
+local mason_registry = require('mason-registry')
+local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() ..
+    '/node_modules/@vue/language-server'
+
+
+local lspconfig = require('lspconfig')
+
+lspconfig.tsserver.setup {
+  init_options = {
+    plugins = {
+      {
+        name = '@vue/typescript-plugin',
+        location = vue_language_server_path,
+        languages = { 'vue' },
+      },
+    },
+  },
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
 }
 
 -- vim: ts=2 sts=2 sw=2 et
