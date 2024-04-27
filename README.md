@@ -27,3 +27,11 @@ Force kill tmux server
 ```shell
 sudo kill -9 $(pgrep -f tmux)
 ```
+
+
+---
+
+# References 
+
+https://unix.stackexchange.com/questions/122475/human-readable-memory-sizes-in-top
+`top` setting, use `e` and `E` (top line) then `W` to write the setttings.
