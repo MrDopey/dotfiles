@@ -24,3 +24,5 @@ _darcs
 # Custom ones
 
 # secrets.sh
+
+untracked/
