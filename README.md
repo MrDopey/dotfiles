@@ -21,6 +21,8 @@ Download zsh theme
 curl -o ~/.oh-my-zsh/themes/nuts.zsh-theme https://raw.githubusercontent.com/rafaelsq/nuts.zsh-theme/master/nuts.zsh-theme
 ```
 
+Install glazevm: https://github.com/glzr-io/glazewm
+
 # Helpful
 
 Force kill tmux server
