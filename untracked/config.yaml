@@ -95,6 +95,8 @@ window_rules:
       - window_process: { equals: 'PowerToys.PowerAccent' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper*' }
+      - window_process: { equals: 'spotify' }
+
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -171,15 +173,15 @@ keybindings:
 
   # Change the focused window to be floating.
   - commands: ['toggle-floating --centered']
-    bindings: ['alt+shift+space']
+    bindings: ['alt+shift+f']
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
-    bindings: ['alt+t']
+    bindings: ['alt+shift+t']
 
-  # Change the focused window to be fullscreen.
+  # Change the focused window to be maximised.
   - commands: ['toggle-fullscreen']
-    bindings: ['alt+f']
+    bindings: ['alt+shift+m']
 
   # Minimize focused window.
   - commands: ['toggle-minimized']
