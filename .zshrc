@@ -110,7 +110,7 @@ function save_logseq ()
   local local_message=${1:-"dump"}
   local commit_message=$(echo "$date $local_message")
 
-  pushd /mnt/c/Sandbox/logsec-dev-notes/ 1>/dev/null
+  pushd $LOGSEQ_DEV_NOTES_DIR/logsec-dev-notes/ 1>/dev/null
     git add -A
     git commit -m "$commit_message"
     git push origin master
