@@ -138,6 +138,11 @@ if having trouble picking up zsh shell
 
 cmd + shift + p -> select default profile
 
+## Aerospace
+
+https://www.youtube.com/watch?v=-FoWClVHG5g
+
+https://www.josean.com/posts/how-to-setup-aerospace-tiling-window-manager
 
 ---
 
