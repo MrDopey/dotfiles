@@ -1,0 +1,5 @@
+[user]
+	name = Mr Dopey
+	email = beforewards@gmail.com
+[core]
+	editor = nvim
