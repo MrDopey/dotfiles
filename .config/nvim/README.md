@@ -13,6 +13,20 @@ curl -LO "https://github.com/BurntSushi/ripgrep/releases/download/${ver}/ripgrep
 sudo dpkg -i "ripgrep_${ver}-1_amd64.deb"
 ```
 
+```shell
+brew install ripgrep
+# pyenv
+brew install pyenv
+brew install openssl readline sqlit3 xz zlib tcl-tk
+pyenv install 3.11.4
+# Poetry
+brew install poetry
+# https://github.com/isen-ng/homebrew-dotnet-sdk-versions
+brew tap isen-ng/dotnet-sdk-versions
+brew install --cask dotnet-sdk8-0-400 
+dotnet --list-sdks
+```
+
 Disable ctrl+c/v bindings in windows terminal
 - https://github.com/microsoft/terminal/issues/5641#issuecomment-621186852 and then https://learn.microsoft.com/en-us/windows/terminal/install#settings-json-filf
 - then sync system clipboard with windows https://superuser.com/questions/1291425/windows-subsystem-linux-make-vim-use-the-clipboard
