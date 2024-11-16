@@ -25,4 +25,5 @@ _darcs
 
 # secrets.sh
 
-untracked/
+untracked
+.DS_Store
