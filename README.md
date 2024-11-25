@@ -43,7 +43,7 @@ git config --global user.email beforewards@gmail.com
 
 
 ```shell
-/ssh-keygen -t ed25519 -C "beforewards@gmail.com" -f .ssh/id_ed25519_dopey
+/ssh-keygen -t ed25519 -C "beforewards@gmail.com" -f ~/.ssh/id_ed25519_dopey
 ```
 
 ### node 
