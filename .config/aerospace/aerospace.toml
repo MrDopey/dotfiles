@@ -162,7 +162,6 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
-alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 alt-c = 'workspace C'
 alt-m = 'workspace M'
 alt-t = 'workspace T'
@@ -223,5 +222,9 @@ run = 'move-node-to-workspace M' # Mail
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = 'move-node-to-workspace T' # Terminal
+
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = 'move-node-to-workspace M' # Meeting
 
 
