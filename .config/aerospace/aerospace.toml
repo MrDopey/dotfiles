@@ -165,6 +165,7 @@ alt-9 = 'workspace 9'
 alt-c = 'workspace C'
 alt-e = 'workspace E'
 alt-m = 'workspace M'
+alt-s = 'workspace S'
 alt-t = 'workspace T'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -180,6 +181,7 @@ alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-c = 'move-node-to-workspace C'
 alt-shift-e = 'move-node-to-workspace E'
 alt-shift-m = 'move-node-to-workspace M'
+alt-shift-s = 'move-node-to-workspace S'
 alt-shift-t = 'move-node-to-workspace T'
 
 alt-shift-f = 'fullscreen'
@@ -191,6 +193,15 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
+
+
+[workspace-to-monitor-force-assignment]
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
+
+M = 'secondary'
+S = 'secondary'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -217,18 +228,22 @@ if.app-id = 'com.hnc.Discord'
 run = 'move-node-to-workspace C' # Chat
 
 [[on-window-detected]]
-if.app-id = 'org.mozilla.thunderbird'
-run = 'move-node-to-workspace M' # Mail
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace E' # Explorer
 
 [[on-window-detected]]
-if.app-id = 'com.googlecode.iterm2'
-run = 'move-node-to-workspace T' # Terminal
+if.app-id = 'org.mozilla.thunderbird'
+run = 'move-node-to-workspace M' # Mail
 
 [[on-window-detected]]
 if.app-id = 'us.zoom.xos'
 run = 'move-node-to-workspace M' # Meeting
 
 [[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = 'move-node-to-workspace E' # Explorer
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace S' # Streaming
+
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+run = 'move-node-to-workspace T' # Terminal
 
