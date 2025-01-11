@@ -66,6 +66,47 @@ Manual changes
 - Profiles -> keys -> key mappings -> Natural text editing
 - Allow deleting forward: https://superuser.com/questions/1743138/strange-behavior-of-delete-key-in-vim-on-iterm-mac
 
+## Docker settings
+
+### Enable host networking
+
+Resources => Network => Enable host networking
+
+https://github.com/docker/for-mac/issues/7448
+
+### Add dns config
+
+Add to the deamon.json ~/.docker/daemon.json, or the 'Docker Engine' option in the UI
+
+```sh
+  "dns": ["1.1.1.1", "8.8.8.8"],
+```
+
+https://stackoverflow.com/questions/61760047/docker-build-npm-install-error-network-timeout
+
+### Disable containerd
+
+General -> Use containerd for pulling and storing images (uncheck)
+
+https://stackoverflow.com/questions/76355896/docker-build-platform-linux-amd64-fails-error-failed-to-solve-no-match-for
+
+### host.docker.internal
+
+In dev container
+
+```json
+	"runArgs": ["--add-host", "host.docker.internal:host-gateway"],
+```
+
+In cli 
+```sh 
+--add-host host.docker.internal:host-gateway
+```
+
+
+https://dev.to/fmtweisszwerg/docker-how-to-fix-host-not-found-in-upstream-hostdockerinternal-37od
+https://echorand.me/posts/docker-extra-hosts/
+
 ## mac settings
 
 - Accessibility
