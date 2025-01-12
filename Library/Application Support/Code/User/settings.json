@@ -1,0 +1,8 @@
+{
+    "editor.lineNumbers": "relative",
+    "workbench.sideBar.location": "right",
+    "chat.commandCenter.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all"
+}
