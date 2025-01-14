@@ -64,7 +64,8 @@ Export / import: https://stackoverflow.com/questions/22943676/how-to-export-iter
 Manual changes
 
 - Profiles -> keys -> key mappings -> Natural text editing
-- Allow deleting forward: https://superuser.com/questions/1743138/strange-behavior-of-delete-key-in-vim-on-iterm-mac
+- Removing "Send Hex Codes: 0x4" Allow deleting forward: https://superuser.com/questions/1743138/strange-behavior-of-delete-key-in-vim-on-iterm-mac
+- Replace ⌥+←Delete with 0x17, https://stackoverflow.com/questions/6205157/how-to-set-keyboard-shortcuts-to-jump-to-beginning-end-of-line
 
 ## Docker settings
 
@@ -156,9 +157,18 @@ https://echorand.me/posts/docker-extra-hosts/
 
 ## Remapping keys
 
-caps lock to delete
+Remap capslock
 
-https://github.com/amarsyla/hidutil-key-remapping-generator
+```shell
+launchctl load -w ~/Library/LaunchAgents/com.local.KeyRemapping.plist
+launchctl unload ~/Library/LaunchAgents/com.local.KeyRemapping.plist
+
+# To verify
+hidutil property --get "UserKeyMapping"
+```
+
+- https://github.com/amarsyla/hidutil-key-remapping-generator
+- https://gist.github.com/sundeepgupta/5a9b1e9c5dec4916863aade55a7d6aed
 
 ## Finder
 
