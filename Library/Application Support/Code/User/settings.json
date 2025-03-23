@@ -4,5 +4,6 @@
     "chat.commandCenter.enabled": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "window.zoomLevel": 2
 }
