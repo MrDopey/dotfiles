@@ -246,6 +246,10 @@ if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace N' # Notes
 
 [[on-window-detected]]
+if.app-id = 'com.electron.logseq'
+run = 'move-node-to-workspace N' # Notes
+
+[[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace S' # Streaming
 
