@@ -176,6 +176,25 @@ Show hidden files
 
 Open finder -> cmd + shift + . (period)
 
+## wsl
+
+### Hardcode dns
+
+`sudo vi /etc/wsl.conf`
+
+```toml
+[network]
+generateResolvConf = false
+```
+
+Then edit `sudo vi /etc/resolv.conf`
+
+```toml
+nameserver 8.8.8.8
+````
+
+https://superuser.com/questions/1533291/how-do-i-change-the-dns-settings-for-wsl2
+
 
 # Helpful
 
