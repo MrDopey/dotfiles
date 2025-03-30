@@ -136,6 +136,8 @@ https://echorand.me/posts/docker-extra-hosts/
             - (disable) Select next source in input menu
         - Mission control
             - Mission control, switch to Desktop X
+    - Dictation
+        - Shortcut, change to press micphone
 
 - Privacy & Security
     - Files and Folders
