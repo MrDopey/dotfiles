@@ -3,3 +3,5 @@
 	email = beforewards@gmail.com
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
