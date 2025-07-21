@@ -124,6 +124,13 @@ export PATH="$PATH:$HOME/download/nvim-linux64/bin/"
 # https://docs.brew.sh/Analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# Auto-activate venv in new tmux panes
+if [[ -n "$TMUX" ]] && [[ -z "$VIRTUAL_ENV" ]]; then
+    if [[ -f "./.venv/bin/activate" ]]; then
+        source "./.venv/bin/activate"
+    fi
+fi
+
 # for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
