@@ -203,7 +203,8 @@ https://superuser.com/questions/1533291/how-do-i-change-the-dns-settings-for-wsl
 if on 3.9
 
 ```shell
-apt install python3.9-venv
+apt-get update
+apt-get install -y python3.9-venv python3-pip
 ```
 
 # Helpful
