@@ -200,12 +200,22 @@ https://superuser.com/questions/1533291/how-do-i-change-the-dns-settings-for-wsl
 
 ### Install python virtual environment
 
-if on 3.9
-
 ```shell
-apt-get update
-apt-get install -y python3.9-venv python3-pip
+curl -fsSL https://pyenv.run | bash
+
+# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+sudo apt update; sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+pyenv latest -k 3.12
+pyenv install 3.12.11
+pyenv global 3.12.11
+# pyenv shell 3.12.11
 ```
+
+- https://github.com/pyenv/pyenv
+
 
 # Helpful
 
