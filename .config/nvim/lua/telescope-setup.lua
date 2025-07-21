@@ -51,6 +51,23 @@ local function live_grep_git_root()
     }
   end
 end
+--
+-- Function to get the directory of the current buffer
+local function get_current_buffer_dir()
+  local current_filepath = vim.api.nvim_buf_get_name(0) -- Get the full path of the current buffer (0 means current)
+
+  -- Check if the buffer has a name (i.e., it's a file, not a scratch buffer)
+  if current_filepath and current_filepath ~= "" then
+    -- Use vim.fn.fnamemodify to get the directory part
+    -- ":h fnamemodify()" for more details on modifiers
+    -- ":p" ensures full path, ":h" gets head (directory)
+    local dir = vim.fn.fnamemodify(current_filepath, ":p:h")
+    return dir
+  else
+    -- Handle cases where the buffer is not associated with a file (e.g., [No Name] buffer)
+    return vim.fn.getcwd() -- current working directory
+  end
+end
 
 vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 
@@ -71,6 +88,19 @@ local function telescope_live_grep_open_files()
     prompt_title = 'Live Grep in Open Files',
   }
 end
+
+vim.keymap.set('n', '<leader>scd', function()
+  require('telescope.builtin').find_files({
+    search_dirs = { get_current_buffer_dir() },
+    prompt_title = 'Find files in current directory'
+  })
+end, { desc = '[S]earch [C]urrent [d]irectory' })
+vim.keymap.set('n', '<leader>scD', function()
+  require('telescope.builtin').live_grep({
+    search_dirs = { get_current_buffer_dir() },
+    prompt_title = 'Grep files in current directory'
+  })
+end, { desc = '[S]earch [C]urrent [D]irectory with grep' })
 vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]earch [/] in Open Files' })
 vim.keymap.set('n', '<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
