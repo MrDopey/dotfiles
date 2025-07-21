@@ -198,6 +198,14 @@ nameserver 8.8.8.8
 https://superuser.com/questions/1533291/how-do-i-change-the-dns-settings-for-wsl2
 
 
+### Install python virtual environment
+
+if on 3.9
+
+```shell
+apt install python3.9-venv
+```
+
 # Helpful
 
 ## Tmux
