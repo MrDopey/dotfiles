@@ -27,6 +27,10 @@ brew install --cask dotnet-sdk8-0-400
 dotnet --list-sdks
 ```
 
+```shell
+:checkhealth
+```
+
 Disable ctrl+c/v bindings in windows terminal
 - https://github.com/microsoft/terminal/issues/5641#issuecomment-621186852 and then https://learn.microsoft.com/en-us/windows/terminal/install#settings-json-filf
 - then sync system clipboard with windows https://superuser.com/questions/1291425/windows-subsystem-linux-make-vim-use-the-clipboard
