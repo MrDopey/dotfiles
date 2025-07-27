@@ -1,5 +1,7 @@
 Need to install for treesitter https://stackoverflow.com/questions/75587679/neovim-treesitter-returning-no-c-complier-error?noredirect=1
 
+> Settings are for neovim 0.11.3
+
 ```shell
 sudo apt update && sudo apt install -y build-essential
 
@@ -25,6 +27,14 @@ brew install poetry
 brew tap isen-ng/dotnet-sdk-versions
 brew install --cask dotnet-sdk8-0-400 
 dotnet --list-sdks
+```
+
+```shell
+# After upgrade
+## Update lazy settings
+Lazy sync
+## Update treesitter
+TSUpadateSync
 ```
 
 ```shell
