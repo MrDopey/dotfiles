@@ -13,8 +13,5 @@ return {
     end,
   },
   'tpope/vim-fugitive',
-  require 'custom.plugins.harpoon',
-  require 'custom.plugins.tmux-navigator',
-  require 'custom.plugins.trouble',
   'mbbill/undotree',
 }
