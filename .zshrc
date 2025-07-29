@@ -118,6 +118,9 @@ function save_logseq ()
   popd 1>/dev/null
 }
 
+# tmux create or attach to a session with the same name as the current directory
+alias tmux-session-dir='tmux new-session -A -s "$(basename $PWD)"'
+
 export PATH="$PATH:$HOME/download/nvim-linux64/bin/"
 # alias git='sudo git'
 
