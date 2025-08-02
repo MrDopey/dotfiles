@@ -216,7 +216,7 @@ pyenv global 3.12.11
 
 - https://github.com/pyenv/pyenv
 
-### Install nixos
+### Install nix
 
 Single user install
 
@@ -229,6 +229,17 @@ Links
 - Mapping of specific package version to nixos pkg version https://lazamar.co.uk/nix-versions/?channel=nixos-25.05&package=go
 - Search packages normally https://search.nixos.org/packages?channel=25.05&from=0&size=50&sort=relevance&type=packages
 - `echo $IN_NIX_SHELL`
+
+### Install wezterm
+
+set `XDG_CONFIG_HOME` environment varible to the wsl location e.g. `\\wsl$\Ubuntu-20.04\home\rex\dotfiles\.config`
+
+```shell
+# To debug
+ctrl + shift + l
+# check config file location
+wezterm.config_file
+```
 
 # Helpful
 
