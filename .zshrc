@@ -134,6 +134,11 @@ if [[ -n "$TMUX" ]] && [[ -z "$VIRTUAL_ENV" ]]; then
     fi
 fi
 
+# Auto-activate venv in new tmux panes
+if [[ -n "$TMUX" ]] && [[ -f "shell.nix" ]]; then
+  nix-shell
+fi
+
 # for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
