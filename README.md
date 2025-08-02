@@ -216,6 +216,18 @@ pyenv global 3.12.11
 
 - https://github.com/pyenv/pyenv
 
+### Install nixos
+
+Single user install
+
+```shell
+$ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
+```
+
+Links
+- https://nixos.org/download/#download-nix
+- Mapping of specific package version to nixos pkg version https://lazamar.co.uk/nix-versions/?channel=nixos-25.05&package=go
+- Search packages normally https://search.nixos.org/packages?channel=25.05&from=0&size=50&sort=relevance&type=packages
 
 # Helpful
 

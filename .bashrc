@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Run zsh
-if test -t 1; then
+# Run zsh if it's in a terminal and not a nix shell
+if  test -t 1 && [[ -z "IN_NIX_SHELL" ]]; then
 exec zsh
 fi
 . "$HOME/.cargo/env"
