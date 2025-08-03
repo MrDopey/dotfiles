@@ -15,30 +15,39 @@ config.window_close_confirmation = "NeverPrompt"
 config.skip_close_confirmation_for_processes_named = { "bash", "zsh", "fish", "tmux" }
 config.color_scheme = "Monokai Remastered"
 
+local cmdMod = ""
+local everythingMod = ""
+
 -- Check if the current OS is macOS (Darwin)
 if wezterm.target_triple:find("darwin") then
 	-- macOS-specific settings here
-	config.keys = {
-		{
-			key = "w",
-			mods = "CMD",
-			action = wizterm.action.CloseCurrentTab({ confirm = false }),
-		},
-	}
+	cmdMod = "CMD"
+	everythingMod = "CMD|SHIFT"
 	config.macos_window_background_blur = 20
 elseif wezterm.target_triple:find("windows") then
 	-- Windows-specific settings here
-	config.keys = {
-		{
-			key = "w",
-			mods = "CTRL",
-			action = wezterm.action.CloseCurrentTab({ confirm = false }),
-		},
-	}
+	cmdMod = "CTRL"
+	everythingMod = "CTRL|SHIFT|ALT"
+	config.default_domain = "WSL:Ubuntu-20.04"
 	-- Wait until it comes out of nightly build
 	-- config.kde_window_background_blur = true
-
-	config.default_domain = "WSL:Ubuntu-20.04"
 end
 
+config.keys = {
+	{
+		key = "w",
+		mods = cmdMod,
+		action = wezterm.action.CloseCurrentTab({ confirm = false }),
+	},
+	{
+		key = "|",
+		mods = everythingMod,
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "_",
+		mods = everythingMod,
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+}
 return config
