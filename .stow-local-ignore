@@ -29,3 +29,4 @@ untracked
 .DS_Store
 .nvm
 starter-pack
+.gitmodules
