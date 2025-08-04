@@ -178,6 +178,14 @@ Show hidden files
 
 Open finder -> cmd + shift + . (period)
 
+## Nix
+
+```shell
+$ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
+```
+
+- https://nixos.org/download/#nix-install-macos
+
 ## wsl
 
 ### Hardcode dns
