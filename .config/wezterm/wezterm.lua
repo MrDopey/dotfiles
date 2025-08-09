@@ -4,6 +4,15 @@ local wezterm = require("wezterm")
 
 local config = {}
 
+-- create a function to concatenate tables
+-- https://www.tutorialspoint.com/lua/lua_merge_tables.htm
+function TableConcat(t1, t2)
+	for i = 1, #t2 do
+		t1[#t1 + 1] = t2[i]
+	end
+	return t1
+end
+
 -- In newer versions of Wezterm, use the config object
 if wezterm.config_builder then
 	config = wezterm.config_builder()
@@ -25,6 +34,13 @@ if wezterm.target_triple:find("darwin") then
 	everythingMod = "CMD|SHIFT"
 	config.macos_window_background_blur = 20
 	config.font_size = 15
+	-- https://github.com/wezterm/wezterm/issues/253
+	config.keys = {
+		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+		{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
+		-- Make Option-Right equivalent to Alt-f; forward-word
+		{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
+	}
 elseif wezterm.target_triple:find("windows") then
 	-- Windows-specific settings here
 	cmdMod = "CTRL"
@@ -34,7 +50,7 @@ elseif wezterm.target_triple:find("windows") then
 	-- config.kde_window_background_blur = true
 end
 
-config.keys = {
+local other_keys = {
 	{
 		key = "w",
 		mods = cmdMod,
@@ -51,4 +67,7 @@ config.keys = {
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 }
+
+TableConcat(config.keys, other_keys)
+
 return config
