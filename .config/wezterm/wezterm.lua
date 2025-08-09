@@ -24,6 +24,7 @@ if wezterm.target_triple:find("darwin") then
 	cmdMod = "CMD"
 	everythingMod = "CMD|SHIFT"
 	config.macos_window_background_blur = 20
+	config.font_size = 15
 elseif wezterm.target_triple:find("windows") then
 	-- Windows-specific settings here
 	cmdMod = "CTRL"
