@@ -1,0 +1,71 @@
+
+
+
+
+# Installation
+
+
+disable secure boot
+restart if there is a failed installation
+
+
+
+Link: https://wiki.cachyos.org/installation/installation_on_root/
+Create a new partition with the following:
+
+Size: 2048MiB
+Filesystem: FAT32
+Mount point: /boot
+Flags: boot
+
+Create another partition for root:
+Size: At least 20000MiB
+Filesystem: Any, refer Filesystem
+Mount point: /
+Flags: (none)
+
+# Setup
+
+## dotfiles
+
+```shell
+rm -rf ~/.profiles ~/.zshrc ~/.bashrc ~/.config/hypr/
+# cd dotfiles
+# stow .
+````
+
+## zsh
+
+install zsh and then the theme
+
+## QT5 Settings
+
+Appearance: darker
+
+## yay
+
+```shell
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+```
+
+Link: https://github.com/Jguer/yay
+
+## packages
+
+```shell
+# official wezterm is old version 20240203-110809-5046fc22
+sudo pacman sync -y \
+    discord \
+    keepassxc \
+    thunderbird \
+    nvim \
+    stow
+
+
+yay --sync \
+    wezterm-nightly-bin
+```
+
