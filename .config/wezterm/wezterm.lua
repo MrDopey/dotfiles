@@ -49,6 +49,8 @@ elseif wezterm.target_triple:find("windows") then
 	config.default_domain = "WSL:Ubuntu-20.04"
 	-- Wait until it comes out of nightly build
 	-- config.kde_window_background_blur = true
+elseif wezterm.target_triple:find("linux") then
+	cmdMod = "SUPER"
 end
 
 local other_keys = {
