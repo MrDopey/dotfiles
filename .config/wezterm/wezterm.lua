@@ -26,6 +26,7 @@ config.color_scheme = "Monokai Remastered"
 
 local cmdMod = ""
 local everythingMod = ""
+local extraKeys = {}
 
 -- Check if the current OS is macOS (Darwin)
 if wezterm.target_triple:find("darwin") then
@@ -35,7 +36,7 @@ if wezterm.target_triple:find("darwin") then
 	config.macos_window_background_blur = 20
 	config.font_size = 15
 	-- https://github.com/wezterm/wezterm/issues/253
-	config.keys = {
+	extraKeys = {
 		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
 		{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
 		-- Make Option-Right equivalent to Alt-f; forward-word
@@ -68,6 +69,6 @@ local other_keys = {
 	},
 }
 
-TableConcat(config.keys, other_keys)
+config.keys = TableConcat(extraKeys, other_keys)
 
 return config
