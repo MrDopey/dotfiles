@@ -57,7 +57,7 @@ Link: https://github.com/Jguer/yay
 
 ```shell
 # official wezterm is old version 20240203-110809-5046fc22
-sudo pacman sync -y \
+sudo pacman --sync \
     discord \
     keepassxc \
     thunderbird \
@@ -66,6 +66,7 @@ sudo pacman sync -y \
 
 
 yay --sync \
+    spotify \
     wezterm-nightly-bin
 ```
 
