@@ -51,6 +51,7 @@ elseif wezterm.target_triple:find("windows") then
 	-- config.kde_window_background_blur = true
 elseif wezterm.target_triple:find("linux") then
 	cmdMod = "SUPER"
+	everythingMod = "SUPER|SHIFT"
 end
 
 local other_keys = {
