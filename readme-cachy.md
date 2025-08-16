@@ -59,6 +59,7 @@ Link: https://github.com/Jguer/yay
 # official wezterm is old version 20240203-110809-5046fc22
 sudo pacman --sync \
     discord \
+    dolphin \
     keepassxc \
     thunderbird \
     nvim \
