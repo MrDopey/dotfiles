@@ -30,3 +30,4 @@ untracked
 .nvm
 starter-pack
 .gitmodules
+readme-.*\.md
