@@ -61,7 +61,9 @@ sudo pacman --sync \
     discord \
     dolphin \
     keepassxc \
+    pyenv \
     thunderbird \
+    tk \
     nvim \
     stow
 
