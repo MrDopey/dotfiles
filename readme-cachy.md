@@ -38,10 +38,6 @@ rm -rf ~/.profiles ~/.zshrc ~/.bashrc ~/.config/hypr/
 
 install zsh and then the theme
 
-## QT5 Settings
-
-Appearance: darker
-
 ## yay
 
 ```shell
