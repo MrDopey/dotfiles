@@ -56,6 +56,7 @@ Link: https://github.com/Jguer/yay
 sudo pacman --sync \
     discord \
     dolphin \
+    hyprsunset \
     keepassxc \
     pyenv \
     thunderbird \
