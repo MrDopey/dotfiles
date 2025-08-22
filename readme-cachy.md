@@ -56,6 +56,7 @@ Link: https://github.com/Jguer/yay
 sudo pacman --sync \
     discord \
     dolphin \
+    flatpak \
     hyprsunset \
     keepassxc \
     pyenv \
@@ -68,5 +69,9 @@ sudo pacman --sync \
 yay --sync \
     spotify \
     wezterm-nightly-bin
+
+flatpak install flathub \
+    com.logseq.Logseq \
+    md.obsidian.Obsidian
 ```
 
