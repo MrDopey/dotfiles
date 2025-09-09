@@ -67,6 +67,9 @@ https://echorand.me/posts/docker-extra-hosts/
     - Display
         - (enable) Reduce motion
 
+- Apple intelligence and Siri
+    - Disable
+
 - Desktop & dock
     - (disable) Automatically rearrange spaces based on most recent use
     - (enable) Automatically hide and show the Dock
