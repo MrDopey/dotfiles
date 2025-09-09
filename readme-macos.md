@@ -7,7 +7,7 @@ brew bundle dump --force --file=~/dotfiles/untracked/brewfile
 brew bundle install --file=~/dotfiles/untracked/brewfile
 ```
 
-## Terminal
+# Terminal
 
 
 ## Iterm2 settings
@@ -141,6 +141,24 @@ $ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
 ```
 
 - https://nixos.org/download/#nix-install-macos
+
+## Spotlight
+
+### Add alt firefox profile
+
+- Create an Automator Application
+- Open Automator → New Document → Application.
+- Add an action: Run Shell Script.
+- Paste something like this (replace MyProfile with your Firefox profile name):
+    - `open -na "Firefox" --args -P "MyProfile" --no-remote`
+    - `-na` ensures a new instance is launched.
+    - `P` picks a specific profile.
+    - `--no-remote` prevents reuse of an already running Firefox instance.
+- Save it as something like Firefox Work.app in your `/Applications` or `~/Applications` folder.
+- Spotlight automatically indexes apps in `/Applications` and `~/Applications`.
+- If it doesn’t show up, go to System Settings → Siri & Spotlight → Spotlight Privacy, remove your Applications folder if it’s excluded.
+
+- https://chatgpt.com/c/68bf81a7-3008-8329-bb16-0962e935b432
 
 # Helpful
 
