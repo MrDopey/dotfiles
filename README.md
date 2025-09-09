@@ -15,13 +15,6 @@ Install the following
 - tmux 3.1+, this config depends on XDG config directory (https://github.com/tmux/tmux/issues/142#issuecomment-586116296)
 - tmux package manager `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
-```shell
-cd ~/<dotfiles>
-touch secrets.sh
-chmod +x secrets.sh
-stow .
-```
-
 Once inside a tmux shell, install the packages
 ```
 <c-b>I
@@ -33,7 +26,9 @@ Once inside a tmux shell, install the packages
 /ssh-keygen -t ed25519 -C "beforewards@gmail.com" -f ~/.ssh/id_ed25519_dopey
 ```
 
+## Wake on lan app
 
+Install.
 
 https://github.com/rktr1998/zig-wol
 
@@ -48,6 +43,15 @@ git config --global user.email beforewards@gmail.com
 
 ```
 nvm install 22
+```
+
+# Init 
+
+```shell
+cd ~/<dotfiles>
+touch secrets.sh
+chmod +x secrets.sh
+stow .
 ```
 
 # Helpful
