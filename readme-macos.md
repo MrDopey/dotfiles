@@ -103,6 +103,11 @@ https://echorand.me/posts/docker-extra-hosts/
         - keepassxc
             - Google drive
         - vscode
+    - Local network
+        - Chrome
+        - Firefox
+        - Wezterm
+    - Apple intelligence report - off
 
 - Screen saver
     - Lock screen settings
