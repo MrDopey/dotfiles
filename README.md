@@ -33,6 +33,10 @@ Once inside a tmux shell, install the packages
 /ssh-keygen -t ed25519 -C "beforewards@gmail.com" -f ~/.ssh/id_ed25519_dopey
 ```
 
+
+
+https://github.com/rktr1998/zig-wol
+
 ## Git
 
 ```shell
