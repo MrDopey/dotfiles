@@ -1,0 +1,8 @@
+.{.{
+    .name = "fulguro",
+    .mac = "E0:51:D8:19:26:FD",
+    .broadcast = "255.255.255.255",
+    .port = 9,
+    .fqdn = "",
+    .description = "",
+}}
