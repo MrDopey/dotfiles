@@ -1,7 +1,3 @@
-
-
-
-
 # Installation
 
 
@@ -57,6 +53,7 @@ sudo pacman --sync \
     discord \
     dolphin \
     flatpak \
+    gparted \
     hyprsunset \
     keepassxc \
     pyenv \
@@ -75,3 +72,8 @@ flatpak install flathub \
     md.obsidian.Obsidian
 ```
 
+# Help
+
+## gparted
+
+from terminal `sudo -i gparted`
