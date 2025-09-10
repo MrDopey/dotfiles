@@ -50,7 +50,6 @@ Link: https://github.com/Jguer/yay
 ```shell
 # official wezterm is old version 20240203-110809-5046fc22
 sudo pacman --sync \
-    discord \
     dolphin \
     flatpak \
     gparted \
@@ -68,12 +67,16 @@ yay --sync \
     wezterm-nightly-bin
 
 flatpak install flathub \
-    com.logseq.Logseq \
-    md.obsidian.Obsidian
+    com.discordapp.Discord \
+    com.logseq.Leu.betterbird.Betterbirdogseq \
+    com.valvesoftware.Steam \
+    eu.betterbird.Betterbird \
+    md.obsidian.Obsidian \
+    org.kde.krita
 ```
 
 # Help
 
 ## gparted
 
-from terminal `sudo -i gparted`
+from terminal `sudo -E gparted`
