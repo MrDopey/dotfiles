@@ -71,9 +71,16 @@ flatpak install flathub \
     com.logseq.Leu.betterbird.Betterbirdogseq \
     com.valvesoftware.Steam \
     eu.betterbird.Betterbird \
+    io.github.ilya_zlobintsev.LACT \
     md.obsidian.Obsidian \
     org.kde.krita
 ```
+
+### LACT
+
+first time opening the app, will require installing some daemons
+
+https://github.com/ilya-zlobintsev/LACT/blob/master/flatpak/README.md
 
 # Help
 
