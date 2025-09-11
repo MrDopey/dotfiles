@@ -23,7 +23,7 @@ Once inside a tmux shell, install the packages
 ## ssh keys
 
 ```shell
-/ssh-keygen -t ed25519 -C "beforewards@gmail.com" -f ~/.ssh/id_ed25519_dopey
+ssh-keygen -t ed25519 -C "beforewards@gmail.com" -f ~/.ssh/id_ed25519_dopey
 ```
 
 ## Wake on lan app
