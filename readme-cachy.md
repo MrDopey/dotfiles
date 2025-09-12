@@ -83,6 +83,15 @@ first time opening the app, will require installing some daemons
 
 https://github.com/ilya-zlobintsev/LACT/blob/master/flatpak/README.md
 
+### Logseq
+
+To make dark theme stick 
+
+- Settings -> Change theme
+- then ctrl + k -> Select avaiable theme -> hit enter (should only be dark)
+
+https://github.com/logseq/logseq/issues/6768#issuecomment-1506302832
+
 # Help
 
 ## gparted
