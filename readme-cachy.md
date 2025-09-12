@@ -64,6 +64,7 @@ sudo pacman --sync \
 
 yay --sync \
     spotify \
+    xp-pen-tablet \
     wezterm-nightly-bin
 
 flatpak install flathub \
