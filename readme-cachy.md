@@ -68,10 +68,12 @@ yay --sync \
     wezterm-nightly-bin
 
 flatpak install flathub \
+    com.bambulab.BambuStudio \
     com.discordapp.Discord \
     com.logseq.Leu.betterbird.Betterbirdogseq \
     com.valvesoftware.Steam \
     eu.betterbird.Betterbird \
+    io.anytype.anytype \
     io.github.ilya_zlobintsev.LACT \
     md.obsidian.Obsidian \
     org.kde.krita
