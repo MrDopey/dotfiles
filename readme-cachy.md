@@ -94,6 +94,23 @@ To make dark theme stick
 
 https://github.com/logseq/logseq/issues/6768#issuecomment-1506302832
 
+
+### nix
+
+```shell
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
+```
+
+https://nixos.org/download/
+
+To clean up
+
+```shell
+nix-store --gc
+```
+
+https://nixos.wiki/wiki/Cleaning_the_nix_store
+
 # Help
 
 ## gparted

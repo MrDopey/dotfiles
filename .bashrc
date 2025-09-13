@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # Run zsh if it's in a terminal and not a nix shell
-if  test -t 1 && [[ -z "IN_NIX_SHELL" ]]; then
+if [[ -z "IN_NIX_SHELL" ]]; then
 exec zsh
 else
     # tmux create or attach to a session with the same name as the current directory

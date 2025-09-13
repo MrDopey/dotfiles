@@ -134,6 +134,7 @@ if [[ -n "$TMUX" ]] && [[ -z "$VIRTUAL_ENV" ]]; then
     fi
 fi
 
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 # Auto-activate venv in new tmux panes
 if [[ -n "$TMUX" ]] && [[ -f "shell.nix" ]]; then
   nix-shell
@@ -149,6 +150,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
 [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
-
 # zig-wol
 export PATH="$HOME/.zig-wol:$PATH"
+
