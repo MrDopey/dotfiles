@@ -56,6 +56,7 @@ sudo pacman --sync \
     hyprsunset \
     keepassxc \
     pyenv \
+    swayidle \
     thunderbird \
     tk \
     nvim \
