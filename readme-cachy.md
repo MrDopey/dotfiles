@@ -53,11 +53,11 @@ sudo pacman --sync \
     dolphin \
     flatpak \
     gparted \
+    hypridle \
     hyprsunset \
     keepassxc \
     pyenv \
     rpi-imager \
-    swayidle \
     thunderbird \
     tk \
     nvim \
