@@ -1,8 +1,15 @@
-.{.{
+.{ .{
     .name = "fulguro",
     .mac = "E0:51:D8:19:26:FD",
     .broadcast = "255.255.255.255",
     .port = 9,
     .fqdn = "",
     .description = "",
-}}
+}, .{
+    .name = "taohelong",
+    .mac = "1C:1B:0D:86:4F:D2",
+    .broadcast = "255.255.255.255",
+    .port = 9,
+    .fqdn = "",
+    .description = "",
+} }
