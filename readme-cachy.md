@@ -56,6 +56,7 @@ sudo pacman --sync \
     hyprsunset \
     keepassxc \
     pyenv \
+    rpi-imager \
     swayidle \
     thunderbird \
     tk \
@@ -72,12 +73,14 @@ flatpak install flathub \
     com.bambulab.BambuStudio \
     com.discordapp.Discord \
     com.logseq.Leu.betterbird.Betterbirdogseq \
+    com.google.Chrome \
     com.valvesoftware.Steam \
     eu.betterbird.Betterbird \
     io.anytype.anytype \
     io.github.ilya_zlobintsev.LACT \
     md.obsidian.Obsidian \
-    org.kde.krita
+    org.kde.krita \
+    us.zoom.Zoom
 ```
 
 ### LACT
