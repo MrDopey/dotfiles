@@ -52,6 +52,12 @@ elseif wezterm.target_triple:find("windows") then
 elseif wezterm.target_triple:find("linux") then
 	cmdMod = "SUPER"
 	everythingMod = "SUPER|SHIFT"
+	extraKeys = {
+		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+		{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
+		-- Make Option-Right equivalent to Alt-f; forward-word
+		{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
+	}
 end
 
 local other_keys = {
