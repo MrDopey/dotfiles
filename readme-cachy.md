@@ -115,6 +115,77 @@ nix-store --gc
 
 https://nixos.wiki/wiki/Cleaning_the_nix_store
 
+## Set DNS globally
+
+
+### Suppress the dhcp server dns lookup
+
+```sh
+# Get the name of the connection
+nmcli conn
+# Do not use dns
+nmcli con mod 'Wired connection 1'rc-update ipv4.ignore-auto-dns yes
+```
+
+Tell the networkmanager config to not manage the resolve file
+
+### Neuter network manager
+
+```
+# /etc/NetworkManager/NetworkManager.conf
+[main]
+dns=none
+```
+
+manually remove the servers
+```
+# /etc/resolv.conf
+
+# nameserver 1.1.1.1
+```
+
+### Setup up resolved with the dns
+
+```
+# sudo mkdir -p /etc/systemd/resolved.conf.d/
+```
+
+```
+# /etc/systemd/resolved.conf.d/dns_servers.conf
+# https://man.archlinux.org/man/resolved.conf.5
+[Resolve]
+DNS=192.168.8.202 1.1.1.1 8.8.8.8
+Domains=~.
+```
+
+```
+# /etc/systemd/resolved.conf.d/fallback_dns.conf
+[Resolve]
+FallbackDNS=
+```
+
+### Restart everyting
+
+```
+# restart networkmanager
+systemctl restart NetworkManager
+# restart resolved
+systemctl restart systemd-resolved.service
+# flush cache
+resolvectl flush-caches
+```
+
+Commands
+- resolvectl status
+- resolvectl show-cache
+- nmcli dev show
+
+Links
+- Networkmanager manual: https://www.networkmanager.dev/docs/api/latest/NetworkManager.conf.html
+- Arch DNS: https://wiki.archlinux.org/title/Domain_name_resolution#Application-level_DNS
+- DNS with resolver.conf https://bbs.archlinux.org/viewtopic.php?id=270132
+- systemd-resolved: https://wiki.archlinux.org/title/Systemd-resolved
+
 # Help
 
 ## gparted
