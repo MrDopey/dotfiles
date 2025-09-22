@@ -55,6 +55,7 @@ sudo pacman --sync \
     gparted \
     hypridle \
     hyprsunset \
+    kde-cli-tools \
     keepassxc \
     pyenv \
     rpi-imager \
@@ -124,7 +125,7 @@ https://nixos.wiki/wiki/Cleaning_the_nix_store
 # Get the name of the connection
 nmcli conn
 # Do not use dns
-nmcli con mod 'Wired connection 1'rc-update ipv4.ignore-auto-dns yes
+nmcli con mod 'Wired connection 1' ipv4.ignore-auto-dns yes
 ```
 
 Tell the networkmanager config to not manage the resolve file
@@ -137,43 +138,32 @@ Tell the networkmanager config to not manage the resolve file
 dns=none
 ```
 
-manually remove the servers
+### Manually configure the dns
+
 ```
 # /etc/resolv.conf
+# Manual configuration with custom DNS servers
 
-# nameserver 1.1.1.1
-```
+nameserver 192.168.8.202
+nameserver 1.1.1.1
 
-### Setup up resolved with the dns
+# Optional search domain (replace with your domain)
+# search example.com
 
-```
-# sudo mkdir -p /etc/systemd/resolved.conf.d/
-```
-
-```
-# /etc/systemd/resolved.conf.d/dns_servers.conf
-# https://man.archlinux.org/man/resolved.conf.5
-[Resolve]
-DNS=192.168.8.202 1.1.1.1 8.8.8.8
-Domains=~.
+# Optional settings
+options timeout:2
+options attempts:3
 ```
 
-```
-# /etc/systemd/resolved.conf.d/fallback_dns.conf
-[Resolve]
-FallbackDNS=
-```
+### Restart everything
 
-### Restart everyting
-
-```
-# restart networkmanager
+```sh
 systemctl restart NetworkManager
-# restart resolved
 systemctl restart systemd-resolved.service
-# flush cache
 resolvectl flush-caches
 ```
+
+### Help / Troubleshooting
 
 Commands
 - resolvectl status
@@ -181,10 +171,12 @@ Commands
 - nmcli dev show
 
 Links
-- Networkmanager manual: https://www.networkmanager.dev/docs/api/latest/NetworkManager.conf.html
 - Arch DNS: https://wiki.archlinux.org/title/Domain_name_resolution#Application-level_DNS
-- DNS with resolver.conf https://bbs.archlinux.org/viewtopic.php?id=270132
+- Networkmanager manual: https://www.networkmanager.dev/docs/api/latest/NetworkManager.conf.html
 - systemd-resolved: https://wiki.archlinux.org/title/Systemd-resolved
+- DNS with resolver.conf https://bbs.archlinux.org/viewtopic.php?id=270132
+- https://man.archlinux.org/man/systemd-resolved.8#/ETC/RESOLV.CONF
+- https://man.archlinux.org/man/resolv.conf.5.en
 
 # Help
 
