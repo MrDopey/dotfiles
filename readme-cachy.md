@@ -47,9 +47,8 @@ Link: https://github.com/Jguer/yay
 
 ## packages
 
-```shell
-# official wezterm is old version 20240203-110809-5046fc22
-sudo pacman --sync \
+```sh
+sudo pacman -Syu \
     dolphin \
     flatpak \
     gparted \
@@ -57,14 +56,14 @@ sudo pacman --sync \
     hyprsunset \
     kde-cli-tools \
     keepassxc \
+    nvim \
     pyenv \
     rpi-imager \
+    stow \
     thunderbird \
-    tk \
-    nvim \
-    stow
+    tk
 
-
+# official wezterm is old version 20240203-110809-5046fc22
 yay --sync \
     spotify \
     xp-pen-tablet \
@@ -73,7 +72,7 @@ yay --sync \
 flatpak install flathub \
     com.bambulab.BambuStudio \
     com.discordapp.Discord \
-    com.logseq.Leu.betterbird.Betterbirdogseq \
+    com.logseq.Logseq \
     com.google.Chrome \
     com.valvesoftware.Steam \
     eu.betterbird.Betterbird \
@@ -84,13 +83,18 @@ flatpak install flathub \
     us.zoom.Zoom
 ```
 
-### LACT
+## betterbird
+
+Show tabs
+- settings -> appearance -> 'Show tab bar vertically' (uncheck)
+
+## LACT
 
 first time opening the app, will require installing some daemons
 
 https://github.com/ilya-zlobintsev/LACT/blob/master/flatpak/README.md
 
-### Logseq
+## Logseq
 
 To make dark theme stick 
 
@@ -100,7 +104,7 @@ To make dark theme stick
 https://github.com/logseq/logseq/issues/6768#issuecomment-1506302832
 
 
-### nix
+## nix
 
 ```shell
 sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
@@ -123,7 +127,7 @@ rclone config
 
 rclone config reconnect gdrive:
 
-mkdir -p ~/mnt
+mkdir -p ~/mnt/gdrive
 rclone mount gdrive: ~/mnt/gdrive
 ```
 
