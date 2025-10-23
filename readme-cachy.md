@@ -116,8 +116,26 @@ nix-store --gc
 
 https://nixos.wiki/wiki/Cleaning_the_nix_store
 
-## Set DNS globally
+## rclone
 
+```sh
+rclone config
+
+rclone config reconnect gdrive:
+
+mkdir -p ~/mnt
+rclone mount gdrive: ~/mnt/gdrive
+```
+
+- https://rclone.org/drive/#making-your-own-client-id
+    - https://console.cloud.google.com/apis/api/drive.googleapis.com
+    - Enable Google drive APIs
+    - https://console.cloud.google.com/auth/overview
+    - Audience -> Add your own account as test user
+    - Cients -> Desktop app -> Create Client id and secret id
+
+
+## Set DNS globally
 
 ### Suppress the dhcp server dns lookup
 
