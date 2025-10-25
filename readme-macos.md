@@ -74,6 +74,18 @@ https://echorand.me/posts/docker-extra-hosts/
     - (disable) Automatically rearrange spaces based on most recent use
     - (enable) Automatically hide and show the Dock
 
+- Spotlight
+    - (disable) Show Related Content
+    - as needed, disable 'Results from apps'
+    - Result from System
+        - (disable) Folders
+        - (disable) IPhone apps
+    - Search Privacy (blacklist certain folders from being indexed by spotlight)
+        - dotfiles
+        - sandbox
+        - test
+        - untracked
+
 - Keyboard
     - Text input, input sources
         - Add colemak
