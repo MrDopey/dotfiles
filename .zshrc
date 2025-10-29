@@ -118,6 +118,11 @@ function save_logseq ()
   popd 1>/dev/null
 }
 
+function mnt_gdrive() {
+  local folder=$1
+  rclone mount gdrive:/$folder ~/mnt/$folder -vvv
+}
+
 # tmux create or attach to a session with the same name as the current directory
 alias tmux-session-dir='tmux new-session -A -s "$(basename $PWD)"'
 
