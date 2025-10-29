@@ -61,7 +61,8 @@ sudo pacman -Syu \
     rpi-imager \
     stow \
     thunderbird \
-    tk
+    tk \
+    xdg-desktop-portal-gtk
 
 # official wezterm is old version 20240203-110809-5046fc22
 yay --sync \
@@ -83,10 +84,24 @@ flatpak install flathub \
     us.zoom.Zoom
 ```
 
+## Set gnome theme as dark
+
+This sets dark mode for a few flatpak applications like firefox and betterbird
+
+```sh
+gsettings get org.gnome.desktop.interface color-scheme
+# Should say 'prefer-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+```
+
 ## betterbird
 
-Show tabs
-- settings -> appearance -> 'Show tab bar vertically' (uncheck)
+Run this command to allow downloading of files. TODO - check why this nuked my settings
+`flatpak override --user --filesystem=home eu.betterbird.Betterbird`
+
+- Show tabs: settings -> appearance -> 'Show tab bar vertically' (uncheck)
+- View -> Layout -> Vertical view
+- Allow downloading of files - requires installation of `xdg-desktop-portal-gtk`
 
 ## LACT
 
