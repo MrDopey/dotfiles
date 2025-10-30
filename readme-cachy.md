@@ -96,9 +96,6 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 ## betterbird
 
-Run this command to allow downloading of files. TODO - check why this nuked my settings
-`flatpak override --user --filesystem=home eu.betterbird.Betterbird`
-
 - Show tabs: settings -> appearance -> 'Show tab bar vertically' (uncheck)
 - View -> Layout -> Vertical view
 - Allow downloading of files - requires installation of `xdg-desktop-portal-gtk`
