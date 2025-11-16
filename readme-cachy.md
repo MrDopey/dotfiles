@@ -49,7 +49,6 @@ Link: https://github.com/Jguer/yay
 
 ```sh
 sudo pacman -Syu \
-    dolphin \
     flatpak \
     gparted \
     hypridle \
@@ -60,6 +59,7 @@ sudo pacman -Syu \
     pyenv \
     rpi-imager \
     stow \
+    thunar \
     thunderbird \
     tk \
     xdg-desktop-portal-gtk
