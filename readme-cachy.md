@@ -81,6 +81,7 @@ flatpak install flathub \
     io.github.ilya_zlobintsev.LACT \
     md.obsidian.Obsidian \
     org.kde.krita \
+    org.localsend.localsend_app \
     us.zoom.Zoom
 ```
 
@@ -105,6 +106,14 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 first time opening the app, will require installing some daemons
 
 https://github.com/ilya-zlobintsev/LACT/blob/master/flatpak/README.md
+
+## Localsend
+
+Allow incoming firewall (to receive files) 
+
+```sh
+sudo ufw allow 53317
+```
 
 ## Logseq
 
