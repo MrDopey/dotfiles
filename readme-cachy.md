@@ -53,6 +53,7 @@ sudo pacman -Syu \
     gparted \
     hypridle \
     hyprsunset \
+    kcalc \
     kde-cli-tools \
     keepassxc \
     nvim \
