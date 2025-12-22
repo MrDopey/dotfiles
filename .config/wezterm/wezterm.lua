@@ -57,6 +57,8 @@ elseif wezterm.target_triple:find("linux") then
 		{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
 		-- Make Option-Right equivalent to Alt-f; forward-word
 		{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
+		-- Make alt + del, delete a word
+		{ key = "Delete", mods = "OPT", action = wezterm.action({ SendString = "\x1bd" }) },
 	}
 end
 
