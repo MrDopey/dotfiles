@@ -96,6 +96,16 @@ gsettings get org.gnome.desktop.interface color-scheme
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
+## Anytype
+
+Enable ssh-agent keychain, so secrets are persisted across sessions
+
+```sh
+systemctl --user enable --now ssh-agent
+```
+
+- https://doc.anytype.io/anytype-docs/advanced/faqs#what-to-do-if-im-asked-to-enter-my-key-recovery-phrase-each-time-on-linux
+
 ## betterbird
 
 - Show tabs: settings -> appearance -> 'Show tab bar vertically' (uncheck)
