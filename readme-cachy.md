@@ -169,6 +169,22 @@ Enable ssh-agent keychain, so secrets are persisted across sessions
 systemctl --user enable --now ssh-agent
 ```
 
+## Zoom
+
+To be confirmed...?
+
+```sh
+sudo ufw allow out 443
+uudo ufw allow out 8801:8810/udp
+sudo ufw reload
+# Verify
+sudo ufw status numbered
+# Delete
+sudo ufw delete <rule number>
+```
+
+- https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060548
+
 ## Set DNS globally
 
 ### Suppress the dhcp server dns lookup
