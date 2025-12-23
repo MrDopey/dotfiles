@@ -51,6 +51,7 @@ Link: https://github.com/Jguer/yay
 sudo pacman -Syu \
     flatpak \
     gparted \
+    gnome-keyring \
     hypridle \
     hyprsunset \
     kcalc \
@@ -95,16 +96,6 @@ gsettings get org.gnome.desktop.interface color-scheme
 # Should say 'prefer-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
-
-## Anytype
-
-Enable ssh-agent keychain, so secrets are persisted across sessions
-
-```sh
-systemctl --user enable --now ssh-agent
-```
-
-- https://doc.anytype.io/anytype-docs/advanced/faqs#what-to-do-if-im-asked-to-enter-my-key-recovery-phrase-each-time-on-linux
 
 ## betterbird
 
@@ -170,6 +161,13 @@ rclone mount gdrive: ~/mnt/gdrive
     - Audience -> Add your own account as test user
     - Cients -> Desktop app -> Create Client id and secret id
 
+## ssh-agent
+
+Enable ssh-agent keychain, so secrets are persisted across sessions
+
+```sh
+systemctl --user enable --now ssh-agent
+```
 
 ## Set DNS globally
 
