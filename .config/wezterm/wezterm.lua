@@ -35,13 +35,6 @@ if wezterm.target_triple:find("darwin") then
 	everythingMod = "CMD|SHIFT"
 	config.macos_window_background_blur = 20
 	config.font_size = 15
-	-- https://github.com/wezterm/wezterm/issues/253
-	extraKeys = {
-		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
-		{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
-		-- Make Option-Right equivalent to Alt-f; forward-word
-		{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
-	}
 elseif wezterm.target_triple:find("windows") then
 	-- Windows-specific settings here
 	cmdMod = "CTRL"
@@ -52,14 +45,18 @@ elseif wezterm.target_triple:find("windows") then
 elseif wezterm.target_triple:find("linux") then
 	cmdMod = "SUPER"
 	everythingMod = "SUPER|SHIFT"
-	extraKeys = {
+end
+
+if wezterm.target_triple:find("darwin") or wezterm.target_triple:find("linux") then
+	extraKeys = TableConcat(extraKeys, {
+		-- https://github.com/wezterm/wezterm/issues/253
 		-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
 		{ key = "LeftArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bb" }) },
 		-- Make Option-Right equivalent to Alt-f; forward-word
 		{ key = "RightArrow", mods = "OPT", action = wezterm.action({ SendString = "\x1bf" }) },
 		-- Make alt + del, delete a word
 		{ key = "Delete", mods = "OPT", action = wezterm.action({ SendString = "\x1bd" }) },
-	}
+	})
 end
 
 local other_keys = {
