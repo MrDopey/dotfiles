@@ -33,6 +33,13 @@ config.quick_select_patterns = {
 	[[(?<=")[^"]+(?=")]],
 	-- Everything inside ' '
 	[[(?<=')[^']+(?=')]],
+
+	-- Docker image names
+	-- letters, numbers, -, / _
+	"(?<=\\s\\s)[a-zA-Z0-9-\\/_]+",
+	-- Docker image tags
+	-- letters, numbers, -, / _ .
+	"(?<=:)[a-zA-Z0-9-\\/_\\.]+",
 }
 
 local cmdMod = ""
