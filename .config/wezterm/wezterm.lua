@@ -24,6 +24,17 @@ config.window_close_confirmation = "NeverPrompt"
 config.skip_close_confirmation_for_processes_named = { "bash", "zsh", "fish", "tmux" }
 config.color_scheme = "Monokai Remastered"
 
+config.quick_select_patterns = {
+	-- Everything inside ( ), ensure pairing and doesn't fall off the edge
+	[[(?<=\()[^\)]+(?=\))]],
+	-- Everything inside [ ]
+	[[(?<=\[)[^])]+(?=\])]],
+	-- Everything inside " "
+	[[(?<=")[^"]+(?=")]],
+	-- Everything inside ' '
+	[[(?<=')[^']+(?=')]],
+}
+
 local cmdMod = ""
 local everythingMod = ""
 local extraKeys = {}
