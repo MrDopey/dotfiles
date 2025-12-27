@@ -61,6 +61,15 @@ In cli
 https://dev.to/fmtweisszwerg/docker-how-to-fix-host-not-found-in-upstream-hostdockerinternal-37od
 https://echorand.me/posts/docker-extra-hosts/
 
+## Podman
+
+```sh
+podman machine init
+podman machine start
+```
+
+https://podman.io/docs/installation#macos
+
 # mac settings
 
 - Accessibility
