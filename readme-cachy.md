@@ -58,6 +58,7 @@ sudo pacman -Syu \
     kde-cli-tools \
     keepassxc \
     nvim \
+    podman \
     pyenv \
     rpi-imager \
     stow \
