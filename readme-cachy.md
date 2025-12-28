@@ -160,6 +160,7 @@ rclone mount gdrive: ~/mnt/gdrive
     - Enable Google drive APIs
     - https://console.cloud.google.com/auth/overview
     - Audience -> Add your own account as test user
+        - publish the app so it's in 'Production' (gives a refresh token)
     - Cients -> Desktop app -> Create Client id and secret id
 
 ## ssh-agent
