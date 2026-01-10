@@ -5,4 +5,4 @@ insensitive=true
 no_actions=false
 term=wezterm
 mode=drun
---show
+normal_window=true
