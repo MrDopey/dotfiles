@@ -1,7 +1,25 @@
-[user]
-	name = Mr Dopey
-	email = beforewards@gmail.com
 [core]
 	editor = nvim
 [init]
 	defaultBranch = main
+
+; [gpg "ssh"]
+; 	allowedSignersFile = /home/scolosaur/.config/git/allowed_signers
+; [gpg]
+; 	format = ssh
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[includeIf "gitdir:~/dotfiles/"]
+	path = ~/.config/git/config-dopey
+
+[includeIf "gitdir:~/sandbox/"]
+	path = ~/.config/git/config-dopey
+
+[includeIf "gitdir:~/sandbox/landmark/"]
+	path = ~/.config/git/config-landmark
+

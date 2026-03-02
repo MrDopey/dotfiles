@@ -1,0 +1,7 @@
+[include]
+	path = ~/.config/git/config-landmark-private
+
+;[user]
+;	name = bob
+;	email = email
+;	signingkey = key

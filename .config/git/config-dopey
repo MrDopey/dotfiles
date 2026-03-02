@@ -1,0 +1,9 @@
+[user]
+	name = Mr Dopey
+	email = beforewards@gmail.com
+
+[include]
+	path = ~/.config/git/config-dopey-private
+
+;[user]
+; 	signingkey = ...
