@@ -58,6 +58,7 @@ sudo pacman -Syu \
     kde-cli-tools \
     keepassxc \
     nvim \
+    pinentry \
     podman \
     pyenv \
     rpi-imager \
@@ -122,6 +123,10 @@ cat ~/.ssh/id_*.pub | awk '{print $3, $1, $2}'
 nvim ~/.config/git/config-dopey-private
 nvim ~/.config/git/config-landmark-private
 
+
+# make sure you don't have to keep putting in passphrase
+echo "pinentry-program $(which pinentry)" >> ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
 ```
 
 - https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key
