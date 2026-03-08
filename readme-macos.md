@@ -61,6 +61,13 @@ In cli
 https://dev.to/fmtweisszwerg/docker-how-to-fix-host-not-found-in-upstream-hostdockerinternal-37od
 https://echorand.me/posts/docker-extra-hosts/
 
+## Pinentry (GPG)
+
+```sh
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+```
+
 ## Podman
 
 ```sh

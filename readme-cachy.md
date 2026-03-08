@@ -100,30 +100,9 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
 
 
-## Git signing
+## Pinentry (GPG)
 
 ```sh
-# With gpg
-gpg --full-generate-key
-## default | ECC - sign and encrypt
-## default | Curve 25519
-gpg --list-secret-keys --keyid-format=long
-# The bit after sec 
-gpg --armor --export <key-id>
-## Add it to Github
-
-# With ssh
-# add the ssh public key as a 'signing key' to github 
-# enable git config, allowedSignersFile
-nvim .config/git/allowed_signers
-# input the relevant public keys as email, type, key
-cat ~/.ssh/id_*.pub | awk '{print $3, $1, $2}'
-
-# create the private files
-nvim ~/.config/git/config-dopey-private
-nvim ~/.config/git/config-landmark-private
-
-
 # make sure you don't have to keep putting in passphrase
 echo "pinentry-program $(which pinentry)" >> ~/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
