@@ -2,4 +2,5 @@ secrets.sh
 .config/tmux/plugins
 .config/git/allowed_signers
 .config/git/config-**-private
+.config/git/config-landmark
 .DS_Store

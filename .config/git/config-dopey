@@ -3,7 +3,7 @@
 	email = beforewards@gmail.com
 
 [include]
-	path = ~/.config/git/config-dopey-private
+	path = config-dopey-private
 
 ;[user]
 ; 	signingkey = ...
