@@ -74,6 +74,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt SHARE_HISTORY
+unsetopt INC_APPEND_HISTORY
+setopt APPEND_HISTORY
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
