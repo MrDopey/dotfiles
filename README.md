@@ -48,6 +48,9 @@ cat ~/.ssh/id_*.pub | awk '{print $3, $1, $2}'
 # create the private files
 nvim ~/.config/git/config-dopey-private
 nvim ~/.config/git/config-landmark-private
+
+# To delete
+gpg --delete-secret-key <key-id>
 ```
 
 ## Wake on lan app
