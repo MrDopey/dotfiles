@@ -15,4 +15,5 @@
         "**/__pycache__": true,
     },
     "explorer.confirmDelete": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
 }
