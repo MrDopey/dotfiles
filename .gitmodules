@@ -1,4 +1,4 @@
-[submodule ".config/nvim"]
-	path = .config/nvim
+[submodule "dot-config/nvim"]
+	path = dot-config/nvim
 	url = ../nvim.git
 	branch = master
