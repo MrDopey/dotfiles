@@ -1,4 +1,4 @@
-FROM python:3.13.5-bookworm
+FROM python:3.14.5-trixie
 
 ARG USER_ID=1000
 ARG GROUP_ID=1000
