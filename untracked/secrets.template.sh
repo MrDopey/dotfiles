@@ -31,6 +31,7 @@ export MISTRAL_API_KEY=
 # https://api.mistral.ai/v1
 # model id: mistral/codestral-latest
 # all model list: https://docs.mistral.ai/models/overview
+# all model limits https://admin.mistral.ai/plateforme/limits
 # expires: 
 
 export NVIDIA_API_KEY=
