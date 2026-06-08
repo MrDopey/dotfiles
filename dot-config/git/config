@@ -8,12 +8,6 @@
 ; [gpg]
 ; 	format = ssh
 
-[commit]
-	gpgsign = true
-
-[tag]
-	gpgsign = true
-
 [includeIf "hasconfig:remote.*.url:git@dopey:MrDopey/**"]
 	path = config-dopey
 
@@ -28,4 +22,10 @@
 ;	name = bob
 ;	email = email
 ;	signingkey = key
+;
+; [commit]
+; 	gpgsign = true
+; 
+; [tag]
+; 	gpgsign = true
 
