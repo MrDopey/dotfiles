@@ -3,6 +3,7 @@ export ZOOM_TOKEN=
 
 export DEV_CONTAINER_USER_ID=$(id -u)
 export DEV_CONTAINER_GROUP_ID=$(id -g)
+export PI_HOME=~/sandbox/dot-pi/
 
 # export LOGSEQ_DEV_NOTES_DIR=/mnt/c/Sandbox/
 # export LOGSEQ_DEV_NOTES_DIR=~/sandbox/
