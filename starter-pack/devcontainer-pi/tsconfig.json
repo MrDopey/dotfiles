@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "paths": {
+      "@earendil-works/pi-coding-agent": ["/usr/local/lib/node_modules/@earendil-works/pi-coding-agent"],
+      "@earendil-works/pi-ai": ["/usr/local/lib/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-ai"],
+      "@earendil-works/pi-tui": ["/usr/local/lib/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-tui"],
+      "@earendil-works/pi-agent-core": ["/usr/local/lib/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-agent-core"]
+    }
+  },
+  "include": [
+    ".pi/agent/**/*.ts",
+    "~/.pi/agent/**/*.ts"
+  ]
+}
