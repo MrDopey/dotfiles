@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pi upgrade",
+            "type": "shell",
+            "command": "sudo npm --prefix /usr/local install -g --ignore-scripts --min-release-age=1 @earendil-works/pi-coding-agent",
+            "group": "none",
+            "problemMatcher": []
+        }
+    ]
+}
