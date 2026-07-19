@@ -266,3 +266,17 @@ Links
 ## gparted
 
 from terminal `sudo -E gparted`
+
+## gpu - if using older gfx
+
+```sh
+# Check what gfx card is installed
+nvidia-smi
+
+# Auto-detect and install
+sudo chwd -a
+# Install closed source driver for older maxwell cards
+sudo pacman -S nvidia-580xx-dkms
+# Install open source turning drivers
+sudo pacman -S linux-cachyos-nvidia-open
+```
