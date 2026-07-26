@@ -136,6 +136,45 @@ export PATH="$PATH:$HOME/download/nvim-linux64/bin/"
 # https://docs.brew.sh/Analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+function container_id() {
+    local dir image matches
+
+    dir=$(basename "$PWD")
+
+    matches=$(
+        docker ps --format '{{.ID}} {{.Image}}' |
+        awk -v dir="$dir" '$2 ~ dir'
+    )
+
+    local count
+    count=$(printf '%s\n' "$matches" | grep -c .)
+
+    case "$count" in
+        0)
+            echo 'no matches'
+            return 1
+            ;;
+        1)
+            printf '%s\n' "$matches" | awk '{print $1}'
+            ;;
+        *)
+            printf '%s\n' "$matches"
+            ;;
+    esac
+}
+
+function enter_container() {
+  local workdir=/workspaces
+  if [[ ! -f .devcontainer/docker-compose.yml ]]; then
+    local dir=$(basename "$PWD")
+    workdir="$workdir/$dir"
+  fi
+
+
+  docker exec -it --workdir "$workdir" "$(container_id)" /usr/bin/env bash
+}
+
+
 # Auto-activate venv in new tmux panes
 if [[ -n "$TMUX" ]] && [[ -z "$VIRTUAL_ENV" ]]; then
     if [[ -f "./.venv/bin/activate" ]]; then

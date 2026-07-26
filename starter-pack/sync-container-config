@@ -1,17 +1,73 @@
 # !#/usr/bin/env bash
+set -e
 
 # "mounts": [
 #   "source=${localEnv:HOME}/.config/nvim,target=/root/.config/nvim,type=bind"
 # ]
 
-container_name=$1
-user_path=${2:-/home/$USER}
 
-full_path="$user_path/.config"
+usage() {
+    cat <<EOF
+Usage: $0 -c container_name [-p user_path]
+
+Options:
+  -c NAME   Docker container name (required)
+  -p PATH   User config path (default: /home/\$USER)
+  -h        Show this help message
+
+Example:
+  $0 -c my-container
+  $0 -c my-container -p /home/dev
+EOF
+}
+
+# After the getopts loop
+shift $((OPTIND - 1))
+
+if [ $# -ne 0 ]; then
+    echo "Error: unexpected argument(s): $*"
+    usage
+    exit 1
+fi
+
+container_name=""
+user_path="/home/$USER"
+
+while getopts ":c:p:h" opt; do
+    case "$opt" in
+        c)
+            container_name="$OPTARG"
+            ;;
+        p)
+            user_path="$OPTARG"
+            ;;
+        h)
+            usage
+            exit 0
+            ;;
+        :)
+            echo "Error: option -$OPTARG requires an argument"
+            usage
+            exit 1
+            ;;
+        \?)
+            echo "Error: invalid option -$OPTARG"
+            usage
+            exit 1
+            ;;
+    esac
+done
+
+if [ -z "$container_name" ]; then
+    container_name=$(zsh -ic 'container_id' 2>/dev/null)
+fi
+
+inside_config_path="$user_path/.config"
+
 echo "container name: $container_name"
-echo "copying to $full_path"
+echo "copying to $inside_config_path"
 
-docker container exec "$container_name" mkdir -p "$full_path"
-docker container cp $(readlink -f ~/.config/nvim) "$container_name:$full_path"
+docker container exec "$container_name" mkdir -p "$inside_config_path"
+docker container cp "$(readlink -f ~/.config/nvim)" "$container_name:$inside_config_path"
 
-docker container exec "$container_name" "$full_path/nvim/container-init.sh"
+docker container exec "$container_name" "$inside_config_path/nvim/container-init.sh"
