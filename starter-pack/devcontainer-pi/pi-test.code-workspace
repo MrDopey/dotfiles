@@ -4,7 +4,7 @@
 			"path": "."
 		},
 		{
-			"path": "/home/lovely/.pi"
+			"path": "/.pi/agent"
 		}
 	],
 	"settings": {}
