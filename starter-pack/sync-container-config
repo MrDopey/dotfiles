@@ -1,0 +1,17 @@
+# !#/usr/bin/env bash
+
+# "mounts": [
+#   "source=${localEnv:HOME}/.config/nvim,target=/root/.config/nvim,type=bind"
+# ]
+
+container_name=$1
+user_path=${2:-/home/$USER}
+
+full_path="$user_path/.config/"
+echo "container name: $container_name"
+echo "copying to $full_path"
+
+docker container exec "$container_name" mkdir -p "$full_path"
+docker container cp $(readlink -f ~/.config/nvim) "$container_name:$full_path"
+
+docker container exec "$container_name" "$full_path/nvim/container-init.sh"
