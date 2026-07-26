@@ -20,7 +20,7 @@ ENV DEVCONTAINER=true
 # Install Pi
 RUN curl -fsSL https://pi.dev/install.sh | sh && \
     apt-get update && \
-    apt-get install fd-find \
+    apt-get install -y fd-find \
     ripgrep
 
 USER $USERNAME
