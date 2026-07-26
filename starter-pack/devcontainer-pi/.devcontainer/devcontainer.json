@@ -23,11 +23,12 @@
 	},
 	"containerEnv": {
 		"CLOUDFLARE_ACCOUNT_ID": "${localEnv:CLOUDFLARE_ACCOUNT_ID}",
+		"PI_CODING_AGENT_DIR": "/opt/dot-agent/dot-pi/agent",
 		"PI_EXPORT_DIR": "./.pi-export",
 		"PI_SESSION_RENAMER_MODEL": "google/gemini-3.1-flash-lite"
 	},
 
-	"mounts": ["source=${localEnv:AGENT_HOME}/.pi/agent/,target=/.pi/agent,type=bind"],
+	"mounts": ["source=${localEnv:AGENT_HOME},target=/opt/dot-agent,type=bind"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

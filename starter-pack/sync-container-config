@@ -7,7 +7,7 @@
 container_name=$1
 user_path=${2:-/home/$USER}
 
-full_path="$user_path/.config/"
+full_path="$user_path/.config"
 echo "container name: $container_name"
 echo "copying to $full_path"
 
