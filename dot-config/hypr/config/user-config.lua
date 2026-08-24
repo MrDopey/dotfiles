@@ -1,0 +1,7 @@
+hl.config({
+	input = {
+		kb_layout = "us",
+		kb_variant = "colemak",
+		kb_options = "caps:escape",
+	},
+})
