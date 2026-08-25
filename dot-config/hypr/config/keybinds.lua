@@ -19,13 +19,6 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }), { desc = 
 
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(config.applauncher), { desc = "Open application launcher" })
 
--- Pin current window
--- hl.bind(
---     mainMod .. " + Y",
---     hl.dsp.window.pin(),
---     { desc = "Pin current window" }
--- )
-
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"), { desc = "Toggle split mode" })
 
 -- ============================================================
@@ -37,37 +30,6 @@ hl.bind("print", hl.dsp.exec_cmd(config.shotRegion), { desc = "screenshot region
 hl.bind("CTRL + Print", hl.dsp.exec_cmd(config.shotWindow), { desc = "Screenshot active window" })
 
 hl.bind("ALT + Print", hl.dsp.exec_cmd(config.shotScreen), { desc = "Screenshot active display" })
-
--- ============================================================
--- Grouping Windows
--- ============================================================
-
--- Toggle current window group
--- hl.bind(
---     mainMod .. " + K",
---     hl.dsp.group.toggle(),
---     { desc = "Toggle window group" }
--- )
-
--- ============================================================
--- Toggle Gaps
--- ============================================================
-
--- hl.bind(
---     mainMod .. " + SHIFT + G",
---     hl.dsp.exec_cmd(
---         'hyprctl --batch "keyword general:gaps_out 5;keyword general:gaps_in 3"'
---     ),
---     { desc = "Set CachyOS default gaps" }
--- )
-
--- hl.bind(
---     mainMod .. " + G",
---     hl.dsp.exec_cmd(
---         'hyprctl --batch "keyword general:gaps_out 0;keyword general:gaps_in 0"'
---     ),
---     { desc = "Remove window gaps" }
--- )
 
 -- ============================================================
 -- Volume Control
@@ -148,13 +110,6 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 5%-"), {
 
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(config.lockcmd), { desc = "Lock screen" })
 
--- Waybar reload
--- hl.bind(
---     mainMod .. " + O",
---     hl.dsp.exec_cmd("killall -SIGUSR2 waybar"),
---     { desc = "Reload Waybar" }
--- )
-
 -- ============================================================
 -- Window Actions
 -- ============================================================
@@ -223,9 +178,13 @@ end)
 
 local resize = {
 	right = { x = 15, y = 0 },
+	L = { x = 15, y = 0 },
 	left = { x = -15, y = 0 },
+	H = { x = -15, y = 0 },
 	up = { x = 0, y = -15 },
+	K = { x = 0, y = -15 },
 	down = { x = 0, y = 15 },
+	J = { x = 0, y = 15 },
 }
 
 for key, delta in pairs(resize) do
@@ -242,30 +201,6 @@ for key, delta in pairs(resize) do
 		}
 	)
 end
-
-hl.bind(
-	mainMod .. " + CTRL + SHIFT + L",
-	hl.dsp.window.resize({ x = 15, y = 0, relative = true }),
-	{ desc = "Resize right", repeating = true }
-)
-
-hl.bind(
-	mainMod .. " + CTRL + SHIFT + H",
-	hl.dsp.window.resize({ x = -15, y = 0, relative = true }),
-	{ desc = "Resize left", repeating = true }
-)
-
-hl.bind(
-	mainMod .. " + CTRL + SHIFT + K",
-	hl.dsp.window.resize({ x = 0, y = -15, relative = true }),
-	{ desc = "Resize up", repeating = true }
-)
-
-hl.bind(
-	mainMod .. " + CTRL + SHIFT + J",
-	hl.dsp.window.resize({ x = 0, y = 15, relative = true }),
-	{ desc = "Resize down", repeating = true }
-)
 
 -- ============================================================
 -- Mouse Resize
