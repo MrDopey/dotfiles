@@ -82,6 +82,9 @@ https://podman.io/docs/installation#macos
 - Accessibility
     - Display
         - (enable) Reduce motion
+    - (Motor) Pointer control
+        - trackpad options
+            - draggind style: three-finger drag
 
 - Apple intelligence and Siri
     - Disable
