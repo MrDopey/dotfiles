@@ -163,7 +163,7 @@ function container_id() {
     esac
 }
 
-function enter_container() {
+function container_enter() {
   local workdir=/workspaces
   if [[ ! -f .devcontainer/docker-compose.yml ]]; then
     local dir=$(basename "$PWD")
