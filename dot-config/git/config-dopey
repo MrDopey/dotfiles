@@ -8,9 +8,9 @@
 ;[user]
 ; 	signingkey = ...
 ;
-; [commit]
-; 	gpgsign = true
-; 
-; [tag]
-; 	gpgsign = true
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
 
