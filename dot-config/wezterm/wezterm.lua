@@ -27,6 +27,8 @@ config.color_scheme = "Monokai Remastered"
 config.quick_select_patterns = {
 	-- ssh pub key
 	"ssh-(?:rsa|dss|ed25519|ecdsa)\\s+[A-Za-z0-9+/=]+?\\s(?:\\S+)?",
+	-- claude resume
+	"claude --resume [\\w-]+",
 	-- Everything inside ( ), ensure pairing and doesn't fall off the edge
 	[[(?<=\()[^\)]+(?=\))]],
 	-- Everything inside [ ]
