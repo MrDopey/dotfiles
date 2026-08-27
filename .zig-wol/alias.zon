@@ -12,4 +12,11 @@
     .port = 9,
     .fqdn = "",
     .description = "",
+}, .{
+    .name = "deinonychus",
+    .mac = "9C:6B:00:DA:95:E3",
+    .broadcast = "255.255.255.255",
+    .port = 9,
+    .fqdn = "",
+    .description = "",
 } }
