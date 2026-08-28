@@ -31,6 +31,8 @@ config.quick_select_patterns = {
 	"claude --resume [\\w-]+",
 	-- git remote
 	"git@(?:\\w+:).+\\.git",
+	-- hyperlinks
+	"http?s://\\S+",
 	-- Everything inside ( ), ensure pairing and doesn't fall off the edge
 	[[(?<=\()[^\)]+(?=\))]],
 	-- Everything inside [ ]
