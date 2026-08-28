@@ -1,11 +1,6 @@
 # !#/usr/bin/env bash
 set -e
 
-# "mounts": [
-#   "source=${localEnv:HOME}/.config/nvim,target=/root/.config/nvim,type=bind"
-# ]
-
-
 usage() {
     cat <<EOF
 Usage: $0 -c container_name [-p user_path]
@@ -69,5 +64,7 @@ echo "copying to $inside_config_path"
 
 docker container exec "$container_name" mkdir -p "$inside_config_path"
 docker container cp "$(readlink -f ~/.config/nvim)" "$container_name:$inside_config_path"
+docker container cp "$(dirname -- "$0")/container-init" "$container_name:$inside_config_path/"
 
-docker container exec "$container_name" "$inside_config_path/nvim/container-init.sh"
+
+docker container exec "$container_name" "$inside_config_path/container-init"
