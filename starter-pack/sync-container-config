@@ -21,15 +21,6 @@ Example:
 EOF
 }
 
-# After the getopts loop
-shift $((OPTIND - 1))
-
-if [ $# -ne 0 ]; then
-    echo "Error: unexpected argument(s): $*"
-    usage
-    exit 1
-fi
-
 container_name=""
 user_path="/home/$USER"
 
@@ -57,6 +48,15 @@ while getopts ":c:p:h" opt; do
             ;;
     esac
 done
+
+# After the getopts loop
+shift $((OPTIND - 1))
+
+if [ $# -ne 0 ]; then
+    echo "Error: unexpected argument(s): $*"
+    usage
+    exit 1
+fi
 
 if [ -z "$container_name" ]; then
     container_name=$(zsh -ic 'container_id' 2>/dev/null)
