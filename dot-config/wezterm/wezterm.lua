@@ -29,6 +29,8 @@ config.quick_select_patterns = {
 	"ssh-(?:rsa|dss|ed25519|ecdsa)\\s+[A-Za-z0-9+/=]+?\\s(?:\\S+)?",
 	-- claude resume
 	"claude --resume [\\w-]+",
+	-- To resume this session: pi --session <id>
+	[[(?<=To resume this session: )pi(?: --\S+ \S+)*]],
 	-- git remote
 	"git@(?:\\w+:).+\\.git",
 	-- hyperlinks
