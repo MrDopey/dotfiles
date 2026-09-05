@@ -65,7 +65,7 @@ for i = 1, 9 do
 	-- Move Windows Silently
 	hl.bind(
 		mainModWorkspace .. " + SHIFT + " .. i,
-		hl.dsp.window.move({ workspace = i }),
+		hl.dsp.window.move({ workspace = i, follow = false }),
 		{ desc = "Move window silently to workspace " .. i }
 	)
 
@@ -77,7 +77,7 @@ for key, workspace in pairs(namedWorkspaces) do
 	-- Move Windows Silently
 	hl.bind(
 		mainModWorkspace .. " + SHIFT + " .. key,
-		hl.dsp.window.move({ workspace = workspace }),
+		hl.dsp.window.move({ workspace = workspace, follow = false }),
 		{ desc = "Move window silently to workspace " .. key }
 	)
 	-- Workspace Actions
