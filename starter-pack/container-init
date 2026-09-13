@@ -100,7 +100,12 @@ onboarding = false
 default_shell = "bash"
 
 [keys]
+prefix = "ctrl+alt+a"
 split_vertical = [ "prefix+v", "prefix+|" ]
+focus_pane_left = [ "ctrl+h", "ctrl+left" ]
+focus_pane_right = [ "ctrl+l", "ctrl+right" ]
+focus_pane_up = [ "ctrl+k", "ctrl+up" ]
+focus_pane_down = [ "ctrl+j", "ctrl+down" ]
 
 [theme]
 name = "solarized"
