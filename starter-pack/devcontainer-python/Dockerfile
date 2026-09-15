@@ -8,7 +8,7 @@ RUN $(groupadd -g $GROUP_ID customgroup || true) && \
     useradd -m -s /bin/bash -u $USER_ID -g $GROUP_ID $USERNAME
 
 # Install basic development tools
-RUN apt update && apt install -y less man-db sudo
+RUN apt update && apt install -y jq less man-db sudo
 
 # Ensure default `node` user has access to `sudo`
 RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
