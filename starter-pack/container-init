@@ -102,14 +102,20 @@ default_shell = "bash"
 [keys]
 prefix = "ctrl+alt+a"
 split_vertical = [ "prefix+v", "prefix+|" ]
+previous_workspace = "prefix+{"
+next_workspace = "prefix+}"
+previous_agent = "prefix+["
+next_agent = "prefix+]"
+navigate_workspace_up = ["up", "k"]
+navigate_workspace_down = ["down", "j"]
 
 [theme]
 name = "solarized"
 
 [ui.sidebar.agents]
 rows = [
-  ["state_icon", "tab", "workspace"],
-  ["agent", "terminal_title_stripped"],
+  ["state_icon", "workspace"],
+  ["tab", "agent", "terminal_title_stripped"],
 ]
 EOF
 
