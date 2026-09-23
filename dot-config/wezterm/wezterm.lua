@@ -27,10 +27,14 @@ config.color_scheme = "Monokai Remastered"
 config.quick_select_patterns = {
 	-- ssh pub key
 	"ssh-(?:rsa|dss|ed25519|ecdsa)\\s+[A-Za-z0-9+/=]+?\\s(?:\\S+)?",
-	-- claude resume
+	-- claude resume <uid>
 	"claude --resume [\\w-]+",
+	-- claude resume "<title>"
+	'claude --resume "[^"]+"',
 	-- To resume this session: pi --session <id>
 	[[(?<=To resume this session: )pi(?: --\S+ \S+)*]],
+	-- codex resume 01a0c7e2-4908-7651-9202-e1347
+	"codex resume [0-9a-f-]+",
 	-- git remote
 	"git@(?:\\w+:).+\\.git",
 	-- hyperlinks
