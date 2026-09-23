@@ -1,7 +1,19 @@
 [core]
 	editor = nvim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
 [init]
 	defaultBranch = main
+[diff]
+	algorithm = histogram
+
+; auto resolve conflicts based on past resolution
+[rerere]
+	enabled = true
+; include parent code in the diff
+[merge]
+	conflictStyle = zdiff3
 
 ; [gpg "ssh"]
 ; 	allowedSignersFile = /home/scolosaur/.config/git/allowed_signers
