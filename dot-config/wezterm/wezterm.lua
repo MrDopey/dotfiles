@@ -40,7 +40,7 @@ config.quick_select_patterns = {
 	-- hyperlinks
 	"http?s://\\S+",
 	-- Everything inside ( ), ensure pairing and doesn't fall off the edge
-	[[(?<=\()[^\)]+(?=\))]],
+	[[(?<=\()[^)]+(?=\))]],
 	-- Everything inside [ ]
 	[[(?<=\[)[^])]+(?=\])]],
 	-- Everything inside " "
