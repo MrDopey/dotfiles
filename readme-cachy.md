@@ -50,6 +50,7 @@ Link: https://github.com/Jguer/yay
 ```sh
 sudo pacman -Syu \
     flatpak \
+    git-delta \
     gparted \
     gnome-keyring \
     hypridle \
