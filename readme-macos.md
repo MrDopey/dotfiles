@@ -203,3 +203,11 @@ $ sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install)
 https://www.youtube.com/watch?v=-FoWClVHG5g
 
 https://www.josean.com/posts/how-to-setup-aerospace-tiling-window-manager
+
+## Google drive
+
+Autoupdate not working well, so just force the upgrade through brew
+
+```sh
+brew upgrade --greedy google-drive
+```
