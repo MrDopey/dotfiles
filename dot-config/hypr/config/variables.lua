@@ -108,10 +108,10 @@ hl.config({ render = { direct_scanout = true } })
 -- Dwindle Layout
 -- ============================================================
 
-hl.config({ dwindle = { special_scale_factor = 0.8, preserve_split = true } })
+hl.config({ dwindle = { preserve_split = true } })
 
 -- ============================================================
 -- Master Layout
 -- ============================================================
 
-hl.config({ master = { new_status = "master", special_scale_factor = 0.8 } })
+hl.config({ master = { new_status = "master" } })
